@@ -14,7 +14,7 @@ from tensorflow.keras.layers import GlobalMaxPooling2D
 from tensorflow.keras.applications.resnet50 import ResNet50, preprocess_input
 
 # transfer learning model import
-model = ResNet50(weights='imagenet', include_top=False, input_shape=(32,32,3))
+model = ResNet50(weights='imagenet', include_top=False, input_shape=(224,224,3))
 model.trainable = False
 
 # building model
@@ -22,7 +22,7 @@ model = tensorflow.keras.Sequential([model, GlobalMaxPooling2D()])
 
 # function to convert image to numeric matrix array
 def feature_array(pic_path, model):
-    pic = image.load_img(pic_path, target_size=(32,32))
+    pic = image.load_img(pic_path, target_size=(224,224))
     pic_array = image.img_to_array(pic)
     expand_pic_array = np.expand_dims(pic_array, axis=0)
     final_pic = preprocess_input(expand_pic_array)
