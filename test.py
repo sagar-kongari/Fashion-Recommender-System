@@ -44,5 +44,5 @@ distance, indices = classifier.kneighbors([norm_result])
 
 for file in indices[0][1:6]:
     temp_img = cv2.imread(filenames[file])
-    cv2.imshow('output', temp_img)
+    cv2.imshow('output', cv2.resize(temp_img, (224,224)))
     cv2.waitKey(0)

@@ -48,9 +48,9 @@ def feature_array(pic_path, model):
 
 # function to recommend using knn algorithm
 def recommend(features,feature_list):
-    classifier = NearestNeighbors(n_neighbors=6, algorithm='brute', metric='euclidean')
+    classifier = NearestNeighbors(n_neighbors=5, algorithm='auto', metric='minkowski')
     classifier.fit(feature_list)
-    indices = classifier.kneighbors([features])
+    distance, indices = classifier.kneighbors([features])
     return indices
 
 upload_file = st.file_uploader('upload an image')
