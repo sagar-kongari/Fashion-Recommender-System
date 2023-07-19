@@ -3,12 +3,13 @@ A recommendation system (or recommender system) is a class of machine learning t
 
 The one that is used in this project is a content-based image recommendation system which is used to generate similar fashion style to the user. This image retrieval technique is paired with a pre-trained model RESNET50 to achieve better results and generate most similar recommendations.
 
-> ResNet stands for Residual Network and is a specific type of convolutional neural network (CNN). ResNet-50 is a 50-layer convolutional neural network (48 convolutional layers, one MaxPool layer, and one average pool layer). Residual neural networks are a type of artificial neural network (ANN) that forms networks by stacking residual blocks.
-
 Access python files to go through the code:
 - [Main](main.py) Training Model.
 - [Test](test.py) Test a single image.
 - [App](app.py) Source code to build webapp.
+
+> ResNet stands for Residual Network and is a specific type of convolutional neural network (CNN). ResNet-50 is a 50-layer convolutional neural network (48 convolutional layers, one MaxPool layer, and one average pool layer). Residual neural networks are a type of artificial neural network (ANN) that forms networks by stacking residual blocks.
+
 ![gif](video.gif)
 
 ## 📈 Workflow
